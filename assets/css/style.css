@@ -210,7 +210,7 @@ body.nav-active { overflow: hidden; }
 .title-1,
 .title-2,
 .title-3,
-.title-4 {
+.title-4,.newfonts{
   color: var(--white);
   font-family: var(--fontFamily-forum);
   font-weight: var(--weight-regular);
@@ -2161,7 +2161,6 @@ textarea.input-field {
    * ABOUT
    */
 
-  .about-content { padding-inline-end: 90px; }
 
   .about .shape {
     display: block;
