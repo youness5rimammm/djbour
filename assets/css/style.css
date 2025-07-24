@@ -1124,49 +1124,123 @@ body.nav-active { overflow: hidden; }
 /*-----------------------------------*\
   #TESTIMONIALS
 \*-----------------------------------*/
+/*-----------------------------------*\
+  #TESTIMONIALS
+\*-----------------------------------*/
 
-.testi {
-  padding-block-end: 340px;
-  position: static;
-}
+/* Your original styles - completely unchanged */
+/*-----------------------------------*\
+  #TESTIMONIALS
+\*-----------------------------------*/
 
-.testi .quote {
-  font-size: 7rem;
-  font-family: var(--fontFamily-forum);
-  line-height: 0.7em;
-}
+/*-----------------------------------*\
+      #TESTIMONIALS
+    \*-----------------------------------*/
 
-.testi .wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  margin-block: 40px 50px;
-}
+    /* Your original styles - completely unchanged */
+    .testi {
+      padding-block-end: 340px;
+      position: static
+    }
 
-.testi .separator { animation: rotate360 15s linear infinite; }
+    .testi .quote {
+      font-size: 7rem;
+      font-family: var(--fontFamily-forum);
+      line-height: 0.7em;
+    }
 
-.profile .img {
-  margin-inline: auto;
-  border-radius: var(--radius-circle);
-  margin-block-end: 15px;
-}
+    .testi .wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-block: 40px 50px;
+    }
 
-.testi .profile-name {
-  color: var(--gold-crayola);
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-3);
-}
+    .testi .separator { 
+      animation: rotate360 15s linear infinite; 
+    }
 
+    .profile .img {
+      margin-inline: auto;
+      border-radius: var(--radius-circle);
+      margin-block-end: 15px;
+    }
 
+    .testi .profile-name {
+      color: var(--gold-crayola);
+      font-weight: var(--weight-bold);
+      text-transform: uppercase;
+      letter-spacing: var(--letterSpacing-3);
+    }
 
+    /* Slider enhancements */
+    .container {
+      position: relative;
+    }
 
+    .testi-slider {
+      position: relative;
+      min-height: 400px;
+    }
 
+    .testi-slide {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.5s ease;
+      pointer-events: none;
+    }
+
+    .testi-slide.active {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .testi-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: var(--gold-crayola);
+      font-size: 2.5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .testi-nav-btn:hover {
+      color: white;
+      background: rgba(0,0,0,0.5);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev-btn { 
+      left: 30px;
+    }
+
+    .next-btn { 
+      right: 30px;
+    }
+
+    @keyframes rotate360 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 /*-----------------------------------*\
   #RESERVATION
 \*-----------------------------------*/
 
-.reservation-form { margin-block-start: -270px; }
+.reservation-form {  margin-block-start: -270px; }
 
 .form-text { margin-block-end: 40px; }
 
@@ -1923,7 +1997,6 @@ textarea.input-field {
 
   .container,
   :is(.service, .event) .container {
-    max-width: 1200px;
     width: 100%;
     margin-inline: auto;
   }

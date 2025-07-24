@@ -430,3 +430,33 @@ window.addEventListener("mousemove", function (event) {
                 wrapper.style.cursor = 'grab';
             }
         });
+
+// Simple slider functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.testi-slide');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  let currentIndex = 0;
+  
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+  
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+  
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+  
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+  
+  // Initialize
+  showSlide(0);
+});
