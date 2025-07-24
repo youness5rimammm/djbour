@@ -3,7 +3,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2022 djabour
  */
 
 
@@ -993,13 +993,13 @@ body.nav-active { overflow: hidden; }
   background-repeat: repeat;
 }
 
-.about .abs-img-2::before {
+/* .about .abs-img-2::before {
   inset: 0;
   background-image: url('../images/badge-2-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   animation: rotate360 15s linear infinite;
-}
+} */
 
 
 
