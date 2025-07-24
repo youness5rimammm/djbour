@@ -1997,6 +1997,7 @@ textarea.input-field {
 
   .container,
   :is(.service, .event) .container {
+    max-width: 1200px;
     width: 100%;
     margin-inline: auto;
   }
@@ -2213,4 +2214,16 @@ textarea.input-field {
     left: 0;
   }
 
+}
+
+@media (min-width: 1200px) {
+     .containerr {
+        width: 98%;
+        margin: 10px 40px;
+        margin-inline: auto;
+    }
+}
+
+.containerr {
+    position: relative;
 }
