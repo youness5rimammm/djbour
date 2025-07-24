@@ -1,0 +1,550 @@
+.fleet-section {
+            padding: 60px 20px;
+            /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
+            position: relative;
+        }
+
+        .fleet-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .fleet-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fleet-header {
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .fleet-title {
+                font-family: var(--fontFamily-forum);
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffffff, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .fleet-description {
+            font-size: 1.7rem;
+            line-height: 1.8;
+            color: rgb(243, 243, 243);
+            max-width: 600px;
+            font-family: var(--fontFamily-dm_sans);
+    font-size: var(--fontSize-body-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lineHeight-5);
+            margin-bottom: 30px;
+        }
+
+        .carousel-container {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .scroll-indicator {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #d4af37, #f4d03f, #d4af37);
+            border-radius: 2px;
+            transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+
+        .scroll-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .carousel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .carousel-title {
+            font-size: 2.2rem;
+            color: var(--gold-crayola);;
+            font-weight: 600;
+        }
+
+        .carousel-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--gold-crayola);;
+            background: transparent;
+            color: var(--gold-crayola);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .carousel-btn:hover {
+            background: var(--gold-crayola);
+            color: #1a1a1a;
+            transform: scale(1.1);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 15px;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 20px;
+        }
+
+        .car-card {
+            min-width: 280px;
+            background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s ease;
+            border: 1px solid #333;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold-crayola);
+        }
+
+        .car-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--gold-crayola);
+            color: #1a1a1a;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .car-image-container {
+            height: 200px;
+            background: linear-gradient(135deg, #3a3a3a, #2a2a2a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .car-card:hover .car-image {
+            transform: scale(1.1);
+        }
+
+        .car-info {
+            padding: 25px;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .car-price {
+            font-size: 1.4rem;
+            color: var(--gold-crayola);
+            font-weight: bold;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .car-name {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .car-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .feature-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .placeholder-image {
+            width: 200px;
+            height: 120px;
+            background: var(--gold-crayola);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+        }
+
+        /* Mobile First - Extra Small devices (phones, 576px and down) */
+        @media (max-width: 575px) {
+            .fleet-section {
+                padding: 30px 15px;
+            }
+            
+            .fleet-title {
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+            .fleet-description {
+                font-size: 1rem;
+                text-align: center;
+                margin: 0 auto 30px;
+            }
+            
+            .carousel-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .carousel-title {
+                font-size: 1.2rem;
+            }
+            
+            .carousel-controls {
+                justify-content: center;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .car-card {
+                min-width: 280px;
+                margin: 0 5px;
+            }
+            
+            .car-info {
+                padding: 20px;
+            }
+            
+            .car-price {
+                font-size: 1.2rem;
+            }
+            
+            .car-name {
+                font-size: 1rem;
+            }
+        }
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) and (max-width: 767px) {
+            .fleet-section {
+                padding: 40px 20px;
+            }
+            
+            .fleet-title {
+                font-size: 2.3rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .fleet-description {
+                text-align: center;
+                margin: 0 auto 40px;
+            }
+            
+            .carousel-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .carousel-title {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-controls {
+                justify-content: center;
+            }
+            
+            .car-card {
+                min-width: 300px;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .fleet-section {
+                padding: 50px 25px;
+            }
+            
+            .fleet-title {
+                font-size: 2.8rem;
+            }
+            
+            .carousel-header {
+                margin-bottom: 25px;
+            }
+            
+            .carousel-title {
+                font-size: 1.4rem;
+            }
+            
+            .car-card {
+                min-width: 320px;
+            }
+            
+            .car-image-container {
+                height: 180px;
+            }
+            
+            .placeholder-image {
+                width: 180px;
+                height: 110px;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .fleet-section {
+                padding: 55px 30px;
+            }
+            
+            .fleet-title {
+                font-size: 3.2rem;
+            }
+            
+            .car-card {
+                min-width: 300px;
+            }
+            
+            .car-image-container {
+                height: 190px;
+            }
+            
+            .placeholder-image {
+                width: 190px;
+                height: 115px;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .fleet-title {
+                font-size: 3.3rem;
+            }
+            
+            .car-card {
+                min-width: 285px;
+            }
+        }
+
+        /* XXL devices (larger desktops, 1400px and up) */
+        @media (min-width: 1400px) {
+            .fleet-title {
+                font-size: 3.5rem;
+            }
+            
+            .car-card {
+                min-width: 280px;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .car-card:hover {
+                transform: none;
+                box-shadow: none;
+                border-color: #333;
+            }
+            
+            .car-card:active {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+                border-color: #d4af37;
+            }
+            
+            .carousel-btn:hover {
+                background: transparent;
+                color: #d4af37;
+                transform: none;
+            }
+            
+            .carousel-btn:active {
+                background: #d4af37;
+                color: #1a1a1a;
+                transform: scale(0.95);
+            }
+            
+            .carousel-wrapper {
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .carousel-wrapper::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .car-card {
+                scroll-snap-align: start;
+                flex-shrink: 0;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .placeholder-image {
+                font-size: 1rem;
+            }
+        }
+
+        /* Landscape orientation for mobile */
+        @media (max-width: 767px) and (orientation: landscape) {
+            .fleet-section {
+                padding: 20px 15px;
+            }
+            
+            .fleet-title {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+            
+            .fleet-description {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            
+            .car-image-container {
+                height: 160px;
+            }
+            
+            .placeholder-image {
+                width: 160px;
+                height: 100px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .fleet-section {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .carousel-controls {
+                display: none !important;
+            }
+            
+            .scroll-indicator {
+                display: none !important;
+            }
+            
+            .car-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .car-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
