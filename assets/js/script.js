@@ -172,7 +172,8 @@ window.addEventListener("mousemove", function (event) {
 // our cars
 
 
-        const carouselStates = {
+     
+const carouselStates = {
             carousel1: { currentIndex: 0, cardsVisible: 4 },
             carousel2: { currentIndex: 0, cardsVisible: 4 }
         };
@@ -430,7 +431,6 @@ window.addEventListener("mousemove", function (event) {
                 wrapper.style.cursor = 'grab';
             }
         });
-
 // Simple slider functionality
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.testi-slide');
