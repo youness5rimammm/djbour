@@ -39,7 +39,6 @@
   -->
     <link rel="stylesheet" href="./assets/css/Our-cars.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/reviews.css">
 
     <!-- 
     - preload images
@@ -142,7 +141,7 @@
 
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a href="index.html#home" class="navbar-link hover-underline active">
+              <a href="index.html" class="navbar-link hover-underline active">
                 <div class="separator"></div>
 
                 <span class="span">Home</span>
@@ -150,7 +149,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link hover-underline">
+              <a href="services.html" class="navbar-link hover-underline">
                 <div class="separator"></div>
 
                 <span class="span">Services</span>
@@ -244,255 +243,288 @@
 
     <main>
       <article>
+        <!-- 
+        - #HERO
+      -->
+
         
 
-        <!-- 
-        - #SERVICE
-      -->
+        
+        
+
+        
+
         <section
-          class="section service bg-black-10 text-center"
-          aria-label="service"
-          id="service"
-          style="padding-top: 240px;"
-        >
+          class="section testi text-center has-bg-image"
+          style="
+            background-image: url('./assets/cars/peter-broomfield-m3m-lnR90uM-unsplash.jpg');
+            padding-top: 220px;
+          "
+          aria-label="testimonials"
+        ><button
+            class="slider-btn prev"
+            aria-label="slide to previous"
+            data-prev-btn
+          >
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+
+          <button
+            class="slider-btn next"
+            aria-label="slide to next"
+            data-next-btn
+          >
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
           <div class="container">
-            <p class="section-subtitle label-2">
-              Location de voiture à Akbou, Béjaïa et aéroport d’Alger
-            </p>
+            <!-- Navigation Buttons -->
+            <button
+              class="testi-nav-btn prev-btn"
+              aria-label="Previous testimonial"
+            >
+              ‹
+            </button>
+            <button
+              class="testi-nav-btn next-btn"
+              aria-label="Next testimonial"
+            >
+              ›
+            </button>
 
-            <h2 class="headline-1 section-title">
-              Nos services de location de voitures
-            </h2>
-
-            <p class="section-text">
-              Découvrez notre gamme complète de services de location : voitures
-              pour mariage, location professionnelle et véhicules pour
-              excursions. Que ce soit pour une journée spéciale, un déplacement
-              professionnel ou une aventure entre amis ou en famille, nous avons
-              la voiture idéale pour chaque occasion.
-            </p>
-
-            <ul class="grid-list">
-              <li>
-                <div class="service-card">
-                  <a href="tel:07997029963" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/cars/service-car1.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture de mariage"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="tel:07997029963">Location sans chauffeur</a>
-                    </h3>
-                    <p class="label-2">
-                      Profitez de notre service de location de voiture sans chauffeur : liberté totale de vos déplacements, à votre rythme. Parfait pour les voyages d’affaires, les escapades personnelles ou les séjours prolongés.
-                    </p>
-                    <a
-                      href="tel:07997029963"
-                      class="btn-text hover-underline label-2"
-                      >Réserver Une Voiture</a
-                    >
-                  </div>
+            <!-- Slider Container -->
+            <div class="testi-slider">
+              <!-- Slide 1 (Your original testimonial) -->
+              <div class="testi-slide active">
+                <div class="quote">”</div>
+                <p class="headline-2 testi-text">
+                  Very satisfied with the services of this agency. The cars are in excellent condition, recent, well maintained and very clean. We immediately feel that customer safety is a priority.
+                </p>
+                <div class="wrapper">
+                  <div class="separator"></div>
+                  <div class="separator"></div>
+                  <div class="separator"></div>
                 </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <a
-                    href="mailto:admin@location-djabour.com"
-                    class="has-before hover:shine"
-                  >
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        src="./assets/cars/service-car2.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture d'affaires"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="mailto:admin@location-djabour.com"
-                        >Navette aéroport & gare</a
-                      >
-                    </h3>
-                    <p class="label-2">
-                      Nous assurons vos transferts depuis et vers les aéroports ou les gares, avec ponctualité et confort. Voyagez l’esprit tranquille, nous nous occupons de votre arrivée ou départ.
-                    </p>
-                    <a
-                      href="mailto:admin@location-djabour.com"
-                      class="btn-text hover-underline label-2"
-                      >Réserver Une Navette</a
-                    >
-                  </div>
+                <div class="profile">
+                  <img
+                    src="./assets/images/testi-avatar1.jpg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                    alt="Sam Jhonson"
+                    class="img"
+                  />
+                  <p class="label-2 profile-name">ADE</p>
                 </div>
-              </li>
+              </div>
 
-              <li>
-                <div class="service-card">
-                  <a href="#reservation" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        style="background-size: fit"
-                        src="./assets/cars/service-car3.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture pour excursion"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="#reservation">Séminaires & Événements spéciaux</a>
-                    </h3>
-                    <p class="label-2">
-                      Rendez vos événements uniques grâce à notre flotte de véhicules adaptés pour les séminaires, mariages, conférences ou réceptions. Une solution de transport élégante et pratique.
-                    </p>
-                    <a
-                      href="#reservation"
-                      class="btn-text hover-underline label-2"
-                      >Nous Contacter Pour Un Événement</a
-                    >
-                  </div>
+              <!-- Slide 2 -->
+              <div class="testi-slide">
+                <div class="quote">”</div>
+                <p class="headline-2 testi-text">
+                  Very good experience at Djabour Car Services, transparent prices, recent and clean vehicle.
+                </p>
+                <div class="wrapper">
+                  <div class="separator"></div>
+                  <div class="separator"></div>
+                  <div class="separator"></div>
                 </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <a href="#reservation" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        style="background-size: fit"
-                        src="./assets/cars/service-car4.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture pour excursion"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="#reservation">Déplacements longue distance</a>
-                    </h3>
-                    <p class="label-2">
-                      Besoin de voyager loin en toute sécurité ? Nos véhicules sont prêts pour vos trajets longue distance, avec tout le confort nécessaire pour une expérience agréable.                    </p>
-                    <a
-                      href="#reservation"
-                      class="btn-text hover-underline label-2"
-                      >Réserver Un Trajet Longue Distance</a
-                    >
-                  </div>
+                <div class="profile">
+                  <img
+                    src="./assets/images/testi-avatar2.jpg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                    alt="Emily Wilson"
+                    class="img"
+                  />
+                  <p class="label-2 profile-name">Elhadi Benchabane</p>
                 </div>
-              </li>
+              </div>
 
-              <li>
-                <div class="service-card">
-                  <a href="#reservation" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        style="background-size: fit"
-                        src="./assets/cars/service-car5.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture pour excursion"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="#reservation">Déplacements médicaux</a>
-                    </h3>
-                    <p class="label-2">
-                      Nous vous accompagnons à vos rendez-vous médicaux avec fiabilité et bienveillance. Un service pratique pour vos consultations, examens ou traitements réguliers.
-                    </p>
-                    <a
-                      href="#reservation"
-                      class="btn-text hover-underline label-2"
-                      >Reserver Pour Un Rendez-Vous Médical</a
-                    >
-                  </div>
+              <!-- Slide 3 -->
+              <div class="testi-slide">
+                <div class="quote">”</div>
+                <p class="headline-2 testi-text">
+                  Very good experience at Djabour Ifren car rental.
+                    Very professional.
+                    Delivery to the airport.
+                    New vehicle, low mileage, and very clean.
+                    Very reasonable rate.
+                    I would like to thank Elhadi for his attentiveness and responsiveness.
+                    I highly recommend this agency.
+                </p>
+                <div class="wrapper">
+                  <div class="separator"></div>
+                  <div class="separator"></div>
+                  <div class="separator"></div>
                 </div>
-              </li>
-
-              <li>
-                <div class="service-card">
-                  <a href="#reservation" class="has-before hover:shine">
-                    <figure
-                      class="card-banner img-holder"
-                      style="--width: 285; --height: 336"
-                    >
-                      <img
-                        style="background-size: fit"
-                        src="./assets/cars/service-car6.jpg"
-                        width="285"
-                        height="336"
-                        loading="lazy"
-                        alt="Location voiture pour excursion"
-                        class="img-cover"
-                      />
-                    </figure>
-                  </a>
-
-                  <div class="card-content">
-                    <h3 class="title-4 card-title">
-                      <a href="#reservation">Importation de voitures</a>
-                    </h3>
-                    <p class="label-2">
-                      Vous souhaitez importer une voiture depuis l’étranger ? Nous proposons un service complet d’importation de véhicules de moins de 3 ans, rapide et sans tracas.
-                    </p>
-                    <a
-                      href="#reservation"
-                      class="btn-text hover-underline label-2"
-                      >En Savoir Plus Sur L’importation</a
-                    >
-                  </div>
+                <div class="profile">
+                  <img
+                    src="./assets/images/testi-avatar3.jpg"
+                    width="100"
+                    height="100"
+                    loading="lazy"
+                    alt="Michael Chen"
+                    class="img"
+                  />
+                  <p class="label-2 profile-name">nas dubois</p>
                 </div>
-              </li>
-
-            </ul>
+              </div>
+            </div>
           </div>
         </section>
+        <!-- 
+        - #RESERVATION
+      -->
 
-        
+        <section class="reservation" id="Réservation">
+          <div class="container">
+            <div class="form reservation-form bg-black-10">
+              <form action="" class="form-left">
+                <h2 class="headline-1 text-center">Réservation en ligne</h2>
 
-        
-        
+                <p class="form-text text-center">
+                  Numero
+                  <a href="tel:+88123123456" class="link">07 970 299 63</a>
+                  or fill out the order form
+                </p>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    autocomplete="off"
+                    class="input-field"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    autocomplete="off"
+                    class="input-field"
+                  />
+                </div>
+
+                <!-- <div class="input-wrapper">
+                  <div class="icon-wrapper">
+                    <ion-icon
+                      name="person-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+
+                    <select name="person" class="input-field">
+                      <option value="1-person">1 Person</option>
+                      <option value="2-person">2 Person</option>
+                      <option value="3-person">3 Person</option>
+                      <option value="4-person">4 Person</option>
+                      <option value="5-person">5 Person</option>
+                      <option value="6-person">6 Person</option>
+                      <option value="7-person">7 Person</option>
+                    </select>
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div class="icon-wrapper">
+                    <ion-icon
+                      name="calendar-clear-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+
+                    <input
+                      type="date"
+                      name="reservation-date"
+                      class="input-field"
+                    />
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div class="icon-wrapper">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                    <select name="person" class="input-field">
+                      <option value="08:00am">08 : 00 am</option>
+                      <option value="09:00am">09 : 00 am</option>
+                      <option value="010:00am">10 : 00 am</option>
+                      <option value="011:00am">11 : 00 am</option>
+                      <option value="012:00am">12 : 00 am</option>
+                      <option value="01:00pm">01 : 00 pm</option>
+                      <option value="02:00pm">02 : 00 pm</option>
+                      <option value="03:00pm">03 : 00 pm</option>
+                      <option value="04:00pm">04 : 00 pm</option>
+                      <option value="05:00pm">05 : 00 pm</option>
+                      <option value="06:00pm">06 : 00 pm</option>
+                      <option value="07:00pm">07 : 00 pm</option>
+                      <option value="08:00pm">08 : 00 pm</option>
+                      <option value="09:00pm">09 : 00 pm</option>
+                      <option value="10:00pm">10 : 00 pm</option>
+                    </select>
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+                </div> -->
+
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  autocomplete="off"
+                  class="input-field"
+                ></textarea>
+
+                <button type="submit" class="btn btn-secondary">
+                  <span class="text text-1">envoyer maintenant</span>
+
+                  <span class="text text-2" aria-hidden="true"
+                    >envoyer maintenant</span
+                  >
+                </button>
+              </form>
+
+              <div
+                class="form-right text-center"
+                style="
+                  background-image: url('./assets/images/form-pattern.png');
+                "
+              >
+                <h2 class="headline-1 text-center">Contactez-nous</h2>
+
+                <p class="contact-label">Demande de réservation</p>
+
+                <a
+                  href="tel:+88123123456"
+                  class="body-1 contact-number hover-underline"
+                  >07 970 299 63</a
+                >
+
+                <div class="separator"></div>
+
+                <p class="contact-label">Location</p>
+
+                <address class="body-4">
+                  Cité des 504 logts Arafou Akbou <br />
+                  UK06001 Bejaia Algérie,
+                </address>
+
+                <p class="contact-label">Daily</p>
+
+                <p class="body-4">
+                  Monday to Sunday <br />
+                  8.00 am - 18.30pm
+                </p>
+
+                <!-- <p class="contact-label">Dinner Time</p>
+
+                <p class="body-4">
+                  Monday to Sunday <br />
+                  05.00 pm - 10.00pm
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </section>
 
         
 
